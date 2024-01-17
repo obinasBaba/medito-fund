@@ -1,4 +1,4 @@
-import { Button, InputAdornment, TextField } from '@mui/material';
+import { Button, Checkbox, FormControlLabel, InputAdornment, TextField } from '@mui/material';
 import { FormikProps } from 'formik';
 import React, { useEffect } from 'react';
 
@@ -41,6 +41,8 @@ export const AmountDetail = ({ formik }: Props) => {
           </Button>
         ))}
       </div>
+
+      <FormControlLabel control={<Checkbox />} label="Donate Anonymous" />
 
       <TextField
         required
