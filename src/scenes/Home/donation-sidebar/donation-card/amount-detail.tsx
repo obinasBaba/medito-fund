@@ -42,7 +42,7 @@ export const AmountDetail = ({ formik }: Props) => {
         ))}
       </div>
 
-      <FormControlLabel control={<Checkbox />} label="Donate Anonymous" />
+      <FormControlLabel control={<Checkbox />} label="Donate Anonymously" />
 
       <TextField
         required

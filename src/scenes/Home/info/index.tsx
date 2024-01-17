@@ -12,12 +12,13 @@ const Subscribe = () => {
 
         <Stack gap="1rem" className={s.txt}>
           <Typography variant="h2" className={s.title}>
-            Transforming ideas into digital results
+            Support Rich Henderson&apos;s Family
           </Typography>
 
           <Typography variant="body1">
-            We take the time to understand your unique needs, goals, and audience to create a website that truly
-            represents your brand and helps you connect with your customers on a deeper level.
+            Heroes often go unsung, but their acts of bravery and kindness echo in the hearts of those they&apos;ve
+            touched. Richard Henderson, was not only a guardian at the crosswalks of the school where he tirelessly
+            worked;
           </Typography>
         </Stack>
       </Stack>
