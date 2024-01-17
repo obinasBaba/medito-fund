@@ -1,0 +1,87 @@
+@use "@/styles" as s;
+
+.container {
+  width: 100%;
+  z-index: 100;
+  pointer-events: none;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+
+
+  & :local {
+
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      backdrop-filter: blur(3px);
+
+      @include s.media-breakpoint-up(md) {
+        padding: .5rem 3rem;
+        backdrop-filter: blur(0);
+
+      }
+
+      & > * {
+        pointer-events: auto;
+      }
+
+      .logo {
+        position: relative;
+        max-width: 3rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        @include s.media-breakpoint-up(md) {
+          max-width: 5rem;
+        }
+
+        svg {
+          fill: rgb(207 144 80 / 83%);
+        }
+
+      }
+
+
+      .btn {
+        @include s.btn;
+      }
+
+      .donate {
+        box-shadow: none;
+        padding: .5rem 1.5rem;
+        //background-color: #E3CCB5;
+        //color: black;
+        //font-weight: 300;
+        border: thin solid #F4BB82;
+        font-size: 1.1rem;
+        //max-width: 90%;
+        margin: 0 auto;
+        width: 100%;
+
+
+        &:hover {
+          //transition: box-shadow 0.2s ease-out 0s;
+          box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(s.$clrs-accent, 0.5) 0px 0px 0px 6px;
+        }
+
+        @include s.media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+
+      .drawer {
+        width: 30rem;
+
+
+      }
+
+
+    }
+  }
+}

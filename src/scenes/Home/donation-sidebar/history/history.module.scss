@@ -1,0 +1,52 @@
+@use 'src/styles/index' as s;
+
+.container {
+  width: 100%;
+
+  background-color: #FDFAF8;
+  border: thin solid rgba(227, 204, 181, 0.6);
+  margin-top: 3rem;
+  border-radius: 1rem;
+  padding: 2rem;
+
+
+  & :local {
+
+    .list {
+      gap: .2rem;
+
+      .item {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        padding-right: 1rem;
+        gap: .5rem;
+        align-items: center;
+      }
+    }
+
+    .btn {
+      @include s.btn;
+      margin-top: 2rem;
+      //border: thin solid black;
+    }
+  }
+}
+
+.all{
+  width: 30rem;
+  height: 40vmax;
+  padding: 1rem 2rem;
+
+  gap: 1rem;
+
+  .item {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-right: 1rem;
+    gap: .5rem;
+    align-items: center;
+  }
+
+}

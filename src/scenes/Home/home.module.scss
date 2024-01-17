@@ -1,0 +1,49 @@
+@use 'src/styles/index' as s;
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  background-repeat: repeat;
+  padding: 10vmax 1.5rem;
+
+  @include s.media-breakpoint-up(md) {
+    padding: 4.5vmax 0;
+  }
+
+
+  & :local {
+
+    .wrapper {
+      //max-width: 90rem;
+      margin: 0 auto;
+
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+
+      .main {
+        display: flex;
+        flex-flow: column;
+        gap: 3rem;
+        max-width: 50rem;
+
+
+
+        @include s.media-breakpoint-up(lg) {
+        }
+
+      }
+
+      .sidebar {
+        display: none;
+        max-width: 30rem;
+        width: 100%;
+
+        @include s.media-breakpoint-up(md) {
+          display: block;
+        }
+      }
+    }
+  }
+}

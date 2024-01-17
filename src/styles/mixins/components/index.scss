@@ -1,0 +1,28 @@
+@use '../../variables/all' as s;
+@use '../../mixins/breakpoints' as m;
+
+@mixin btn {
+  box-shadow: none;
+  padding: .55rem 1.5rem;
+  background-color: snow;
+  color: black;
+  font-weight: 300;
+  border: thin solid rgba(s.$clrs-accent, 0.8);
+  margin-left: auto;
+
+
+  &:hover {
+    //transition: box-shadow 0.2s ease-out 0s;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(s.$clrs-accent, 0.5) 0px 0px 0px 6px;
+  }
+}
+
+@mixin card_space {
+  border-radius: 50px;
+  background-color: white;
+  padding: 4rem 2rem;
+
+  @include m.media-breakpoint-up(sm) {
+    padding: 4rem;
+  }
+}

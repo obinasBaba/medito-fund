@@ -25,6 +25,15 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@global/*": [
+        "./src/styles/global-style/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
       ]
     },
     "types": [

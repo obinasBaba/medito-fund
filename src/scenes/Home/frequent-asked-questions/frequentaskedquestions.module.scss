@@ -1,0 +1,73 @@
+@use '@/styles/index.scss' as s;
+
+.container {
+
+  width: 100%;
+
+  @include s.card_space;
+
+
+  & :local {
+
+    .title {
+      position: relative;
+      font-size: 5rem;
+      text-align: center;
+      text-decoration: underline;
+      font-weight: 300;
+    }
+
+    .content {
+      //box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-flow: column;
+      margin-top: 2rem;
+
+      .item {
+        padding: 1rem 0;
+        overflow: hidden;
+
+        &:not(:first-child) {
+          border-top: 1px solid lightblue;
+        }
+
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          background-color: white;
+
+          //border: 1px solid blue;
+
+          &.selected {
+            padding-bottom: 0;
+          }
+
+          .arrow{
+            transition: transform 0.2s ease-out 0s;
+            transform: rotate(0deg);
+
+            &.open   {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .answer {
+          margin-top: 1rem;
+          border-top: 1px solid lightblue;
+          padding-top: 1.5rem;
+          //display: none;
+
+          //border: 1px solid lightblue;
+
+          &.selected {
+            display: block;
+          }
+        }
+      }
+
+    }
+  }
+}

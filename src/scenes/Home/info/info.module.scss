@@ -1,0 +1,62 @@
+@use '@/styles/index.scss' as s;
+
+.info {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+
+  @include s.card_space;
+  padding-bottom: 2.5rem;
+
+
+  & :local {
+    .img {
+      display: none;
+      border-radius: 50%;
+      height: 5rem;
+      width: 5rem;
+      background-color: #F7F2F2;
+      margin-top: 1rem;
+
+      @include s.media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+
+    .txt {
+      flex: 1;
+
+      .title {
+        line-height: 1.1;
+        font-weight: 900;
+      }
+    }
+
+    .actions {
+      margin: 1.25rem 0;
+      margin-bottom: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .btn {
+        box-shadow: none;
+        padding: .55rem 1.5rem;
+        background-color: snow;
+        color: black;
+        font-weight: 300;
+        border: thin solid rgba(s.$clrs-accent, 0.3);
+
+
+        &:hover {
+          //transition: box-shadow 0.2s ease-out 0s;
+          box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(s.$clrs-accent, 0.5) 0px 0px 0px 6px;
+        }
+      }
+    }
+
+  }
+
+}
+

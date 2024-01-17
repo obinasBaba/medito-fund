@@ -1,0 +1,103 @@
+@use 'src/styles/index' as s;
+
+.container {
+  width: 100%;
+  background-color: #FDFAF8;
+  border: thin solid rgba(227, 204, 181);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 3rem;
+
+  & :local {
+
+    .header {
+      background-color: white;
+      padding: 1rem ;
+      padding-bottom: 0;
+      border-bottom-left-radius: 2.5rem;
+      border-bottom-right-radius: 2.5rem;
+      border-bottom: thin solid rgba(227, 204, 181, 0.8);
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      gap: 1rem;
+
+      .back{
+        font-weight: 300;
+        align-self: flex-start;
+
+        svg{
+          rotate: -90deg;
+          margin-bottom: .1rem;
+        }
+      }
+
+      .title {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.1;
+      }
+
+      .tab {
+        margin: 0 2rem;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+
+      .animator {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+      }
+    }
+
+    .suggestion {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 100%;
+      justify-content: center;
+
+      //border: 1px solid #000;
+
+      .btn {
+        border-radius: 6px;
+        width: calc((100% / 3) - 1rem);
+        //flex: 1;
+        background-color: #D9D9D9;
+        color: black;
+        font-weight: 300;
+        font-size: 1.05rem;
+        white-space: nowrap;
+
+        small {
+          margin-bottom: .2rem;
+          color: #313131;
+        }
+
+      }
+
+    }
+
+    .donate {
+      box-shadow: none;
+      padding: .6rem 1.5rem;
+      //background-color: #E3CCB5;
+      //color: black;
+      //font-weight: 300;
+      border: thin solid #F4BB82;
+      font-size: 1.2rem;
+      //max-width: 90%;
+      margin: 0 auto;
+      width: 100%;
+
+
+      &:hover {
+        //transition: box-shadow 0.2s ease-out 0s;
+        box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(s.$clrs-accent, 0.5) 0px 0px 0px 6px;
+      }
+    }
+  }
+}
